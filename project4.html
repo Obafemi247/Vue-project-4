@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Instant search</title>
+	<link rel="stylesheet" type="text/css" href="project4.css">
+</head>
+<body>
+
+	<form id="search">
+
+		 <div id="text">
+		 	<input type="search" placeholder="Please enter your terms!" v-model="searchOptions">
+		 </div>
+
+		 	<ul>
+		 		<li v-for="term in selectedTerms">
+		 			 <a v-bind:href="term.url"><img v-bind:src="term.image" /></a>
+            <p>{{term.title}}</p>	
+		 		</li>
+		 	</ul>
+
+		 </div>
+
+	</form>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="project4.js"></script>
+
+</body>
+</html>
